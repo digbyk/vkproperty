@@ -1,0 +1,153 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Victoria Knight Property</title>
+	<link rel="stylesheet" href="http://cdn.foundation5.zurb.com/foundation.css">
+	<link rel="stylesheet" href="css/app.css">
+	<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<script src="js/vendor/modernizr.js"></script>
+</head>
+
+<body>
+
+	<div class="contain-to-grid sticky" id="top">
+		<nav class="top-bar foundation-bar" data-topbar data-options="sticky_on: large">
+			<ul class="title-area">
+				<li class="name">
+					<h1><a href="#">Victoria Knight Property</a></h1>
+				</li>
+				<li class="toggle-topbar menu-icon"><a href="#"><span></span></a>
+				</li>
+			</ul>
+			<section class="top-bar-section">
+				<ul class="right">
+					<li><a href="#home">Home</a>
+					</li>
+					<li><a href="#services">Services</a>
+					</li>
+					<li><a href="#contact">Contact</a>
+					</li>
+					<li><a href="#about">About</a>
+					</li>
+				</ul>
+			</section>
+		</nav>
+	</div>
+
+	<div class="row" id="home">
+		<div class="large-12 columns">
+			<h1><img class="homesvg" src="img/house.svg" /></h1>
+		</div>
+		<div class="medium-12 columns">
+			<h1 class="hero">Victoria Knight Property</h1>
+		</div>
+		<div class="medium-8 medium-offset-2 columns end">
+			<p>Independent, trusted property adviser.</p>
+		</div>
+	</div>
+
+	<div class="row" id="services">
+		<div class="large-12 columns">
+			<h1>Services</h1>
+		</div>
+		<div class="medium-8 medium-offset-2 columns">
+			<h2>Property Search</h2>
+			<p>Post-ironic narwhal street art yr trust fund cray. Paleo banh mi vegan yr taxidermy XOXO, heirloom PBR sartorial artisan keytar. Chia Kickstarter bitters roof party raw denim Neutra. Brooklyn twee bicycle rights, trust fund kale chips asymmetrical tattooed High Life irony organic flexitarian. Chillwave VHS vinyl kitsch asymmetrical crucifix, umami messenger bag disrupt heirloom.</p>
+		</div>
+		<div class="medium-8 medium-offset-2 columns end">
+			<h2>Property Management</h2>
+			<p>Sartorial meggings pour-over, Marfa narwhal Odd Future asymmetrical 3 wolf moon actually four dollar toast Brooklyn health goth. Whatever Wes Anderson kogi, cardigan skateboard hoodie before they sold out wayfarers.</p>
+		</div>
+	</div>
+
+	<div class="row" id="contact">
+		<div class="large-12 columns">
+			<h1>Contact</h1>
+		</div>
+		<div class="medium-6 medium-offset-3 columns end">
+			<ul>
+				<li>07968 812185
+				</li>
+			</ul>
+		</div>
+	</div>
+	<form>
+		<div class="row">
+			<div class="medium-6 medium-offset-3 columns">
+				<label>Name
+					<input type="text" placeholder="" />
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="medium-6 medium-offset-3 columns end">
+				<label>Email
+					<input type="text" placeholder="" />
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="medium-6 medium-offset-3 columns end">
+				<label>Telephone
+					<input type="text" placeholder="" />
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="medium-6 medium-offset-3 columns end">
+				<label>Question / comments
+					<textarea placeholder=""></textarea>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="medium-6 medium-offset-3 columns end">
+				<input type="Submit" class="button" value="Submit" />
+			</div>
+		</div>
+	</form>
+
+	<div class="row" id="about">
+		<div class="medium-8 medium-offset-2 columns end">
+			<h1>About</h1>
+			<p>Bacon ipsum dolor amet beef ribs leberkas kevin jerky rump, hamburger tail sirloin ball tip porchetta. Fatback shoulder shank tongue short ribs drumstick chuck pork loin prosciutto swine rump.</p>
+			<p>Andouille sirloin bresaola ham jerky capicola kielbasa venison. Alcatra brisket ground round pork belly venison doner pastrami biltong bacon pancetta tri-tip tongue t-bone. Meatloaf venison bacon rump, tenderloin flank alcatra drumstick meatball frankfurter beef short ribs chuck biltong landjaeger. Bacon tri-tip alcatra pork belly salami pork chop.</p>
+		</div>
+		<div class="medium-8 medium-offset-2 columns end">
+			<h2>Testimonials</h2>
+			<blockquote>"Victoria is wonder and so helpful and got me the house I wanted."<cite>Ulrika Johnson</cite>
+			</blockquote>
+		</div>
+	</div>
+
+	<div id="back-top">
+		<a href="#"><img class="homesvg" src="img/up.svg" alt="Back to top" />
+		</a>
+	</div>
+	<script src="js/vendor/jquery.js"></script>
+	<script src="//cdn.foundation5.zurb.com/foundation.js"></script>
+	<script>
+		$(document).foundation();
+		$("#back-top").hide();
+		$(function () {
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					$('#back-top').fadeIn();
+				} else {
+					$('#back-top').fadeOut();
+				}
+			});
+			$('#back-top .fi-arrow-up').click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 800);
+				return false;
+			});
+		});
+	</script>
+</body>
+
+</html>
