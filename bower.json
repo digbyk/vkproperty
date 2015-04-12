@@ -1,0 +1,30 @@
+{
+  "name": "vkproperty",
+  "version": "0.0.1",
+  "authors": [
+    "digbyk <digby@digby.net>"
+  ],
+  "description": "Victoria Knight Property Search",
+  "main": "index.html",
+  "keywords": [
+    "property",
+    "search",
+    "property",
+    "finder",
+    "london",
+    "home",
+    "couties"
+  ],
+  "license": "MIT",
+  "homepage": "www.vkpropertysearch.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.5"
+  }
+}
