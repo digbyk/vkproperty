@@ -23,8 +23,11 @@ module.exports = function () {
 			if (err) {
 				return console.error(err);
 			}
-			res.render('thanks');
+			res.redirect('/thanks');
 		});
+	});
+	router.get('/thanks', function (req, res) {
+		res.render('thanks');
 	});
 	return router;
 };

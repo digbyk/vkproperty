@@ -44,7 +44,7 @@ a {
 }
 
 p {
-	margin: .5rem
+	margin: .5rem;
 }
 
 #outer {
@@ -108,12 +108,17 @@ a:hover {
 }
 
 #about img,
-#services img {
+#services img,
+#contact img {
 	height: 6rem
 }
 
-#contact {
-	margin: 1rem 0
+#contact p {
+	text-align: left;
+}
+
+#footer {
+	margin: 1rem 0;
 }
 
 .inline {
@@ -136,23 +141,37 @@ a:hover {
 }
 
 fieldset {
-	width: 80%;
+	box-sizing: border-box;
+	width: 100%;
+	border-width: 0;
+	margin: 0;
 	background-color: rgba(0, 0, 0, 0.3);
 	text-align: left;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 fieldset label {
-	width: 30%;
+	box-sizing: border-box;
+	width: 100%;
 	float: left;
 	clear: left;
 }
 
 fieldset input,
 fieldset textarea {
-	background-color: rgba(255, 255, 255, 0.3);
+	box-sizing: border-box;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
 	padding: 0.5em;
 	border: 1px solid;
-	color: black;
+	color: white;
+}
+
+fieldset textarea {
+	height: 8rem;
+	margin-bottom: 0.5rem;
 }
 
 @media only screen and (max-height: 800px) {
