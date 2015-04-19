@@ -128,15 +128,31 @@ a:hover {
 }
 
 .inline li .textblock {
-	background-color: rgba(0, 0, 0, 0.3)
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 .inline img {
 	height: 2rem
 }
 
-.invis {
-	display: none
+fieldset {
+	width: 80%;
+	background-color: rgba(0, 0, 0, 0.3);
+	text-align: left;
+}
+
+fieldset label {
+	width: 30%;
+	float: left;
+	clear: left;
+}
+
+fieldset input,
+fieldset textarea {
+	background-color: rgba(255, 255, 255, 0.3);
+	padding: 0.5em;
+	border: 1px solid;
+	color: black;
 }
 
 @media only screen and (max-height: 800px) {
