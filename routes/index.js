@@ -3,6 +3,11 @@ var router = express.Router();
 var sendgrid = require('sendgrid')(process.env.SENDGRID_USER, process.env.SENDGRID_PASSWORD);
 
 module.exports = function () {
+	router.use(function (req, res, next) {
+		var now = new Date();
+		res.locals.year = now.getFullYear();
+		next();
+	});
 	router.get('/', function (req, res) {
 		res.render('index');
 	});
