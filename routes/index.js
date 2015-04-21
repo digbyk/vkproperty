@@ -9,13 +9,19 @@ module.exports = function () {
 		next();
 	});
 	router.get('/', function (req, res) {
-		res.render('index');
+		res.render('index', {
+			title: 'Victoria Knight Property Search'
+		});
 	});
 	router.get('/about', function (req, res) {
-		res.render('about');
+		res.render('about', {
+			title: 'Victoria Knight Property Search - About Us'
+		});
 	});
 	router.get('/contact', function (req, res) {
-		res.render('contact');
+		res.render('contact', {
+			title: 'Victoria Knight Property Search - Contact'
+		});
 	});
 	router.post('/contact', function (req, res) {
 		var email = new sendgrid.Email({
@@ -32,7 +38,9 @@ module.exports = function () {
 		});
 	});
 	router.get('/thanks', function (req, res) {
-		res.render('thanks');
+		res.render('thanks', {
+			title: 'Victoria Knight Property Search - Thank you'
+		});
 	});
 	return router;
 };
