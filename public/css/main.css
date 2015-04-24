@@ -39,12 +39,23 @@ h2 {
 	font-size: 1.4rem
 }
 
+p {
+	margin: .5rem;
+}
+
 a {
+	color: #eee;
 	text-decoration: none
 }
 
-p {
-	margin: .5rem;
+a:hover {
+	color: white;
+	text-decoration: underline
+}
+
+#menu a:hover {
+	text-decoration: none;
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 #outer {
@@ -92,16 +103,6 @@ p {
 
 #main {
 	flex-grow: 5
-}
-
-a {
-	color: #eee;
-	text-decoration: none
-}
-
-a:hover {
-	color: white;
-	text-decoration: underline
 }
 
 #about,
