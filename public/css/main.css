@@ -67,6 +67,12 @@ p {
 	margin: 1rem
 }
 
+#menu a {
+	border: 1px solid #fff;
+	border-radius: 10px;
+	padding: 0.1rem 0.5rem;
+}
+
 #brand {
 	padding: 8rem 0;
 	max-width: 80%;
