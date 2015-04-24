@@ -42,5 +42,10 @@ module.exports = function () {
 			title: 'Victoria Knight Property Search - Thank you'
 		});
 	});
+	router.get('/tweets', function (req, res) {
+		res.render('tweets', {
+			title: 'Victoria Knight Property Search - Tweets'
+		});
+	});
 	return router;
 };
