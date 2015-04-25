@@ -5,16 +5,10 @@ html
 	body
 		#outer
 			#inner
-				section#menu
-					ul.inline
-						li
-							a(href='/') Home
-						li
-							a(href='/about') About Us
-						li
-							a(href='/contact') Contact
-						li
-							a(href='/tweets') Tweets
+				section#slogo
+					img(src="/images/vk_logo_monogram.svg")
+				section#nav
+					include ./partials/nav
 				block content
 				include ./partials/footer
 		script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')
