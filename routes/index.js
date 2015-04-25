@@ -10,7 +10,8 @@ module.exports = function () {
 	});
 	router.get('/', function (req, res) {
 		res.render('index', {
-			title: 'Victoria Knight Property Search'
+			title: 'Victoria Knight Property Search',
+			hideLogo: true
 		});
 	});
 	router.get('/about', function (req, res) {

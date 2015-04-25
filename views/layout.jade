@@ -5,8 +5,9 @@ html
 	body
 		#outer
 			#inner
-				section#slogo
-					img(src="/images/vk_logo_monogram.svg")
+				if !hideLogo
+					section#slogo
+						img(src="/images/vk_logo_monogram.svg")
 				section#nav
 					include ./partials/nav
 				block content
