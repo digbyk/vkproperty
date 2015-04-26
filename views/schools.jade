@@ -1,0 +1,35 @@
+extends layout
+
+block content
+	section#main
+		section#schools
+			script(type="text/javascript", src="//maps.googleapis.com/maps/api/js?key=AIzaSyAUq_5LOVXjQCEIiyIsloTg8pwZdHm2Q94")
+			script.
+				function initialize() {
+					var mapOptions = {
+						center: { lat: 51.540115, lng: -0.9042651},
+						zoom: 11
+					};
+					var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+					var marker;
+					var infoWindow;
+					$.get( "/api/schools", function(schools) {
+						$.each(schools, function(index, school) {
+							marker = new google.maps.Marker({position: {lat: school.lat, lng: school.lng}, title: school.EstablishmentName});
+							var infowindow = new google.maps.InfoWindow();
+							google.maps.event.addListener(marker, 'click', (function(marker, i) {
+								return function() {
+									infowindow.setContent('<h1>' + school.EstablishmentName + '</h1><p>' + school.EstablishmentName + '</p>');
+									infowindow.open(map, marker);
+								}
+							})(marker, i));
+							marker.setMap(map);
+						});
+					});
+					for (var i = 0; i < schools.length; i++) {
+					}
+				}
+				google.maps.event.addDomListener(window, 'load', initialize);
+			h2 Local schools
+			#map-canvas
+

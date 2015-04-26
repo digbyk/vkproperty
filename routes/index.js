@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var sendgrid = require('sendgrid')(process.env.SENDGRID_USER, process.env.SENDGRID_PASSWORD);
+var schoolsService = require('../services/schools.js');
 
 module.exports = function () {
 	router.use(function (req, res, next) {
@@ -52,6 +53,19 @@ module.exports = function () {
 		res.render('tweets', {
 			title: 'Victoria Knight Property Search - Tweets'
 		});
+	});
+	router.get('/schools', function (req, res) {
+		schoolsService.getSchools(function (err, data) {
+			res.render('schools', {
+				title: 'Victoria Knight Property Search - Schools',
+				schools: data
+			});
+		})
+	});
+	router.get('/api/schools', function (req, res) {
+		schoolsService.getSchools(function (err, data) {
+			res.json(data);
+		})
 	});
 	return router;
 };
