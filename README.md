@@ -1,3 +1,3 @@
 # Victoria Knight Property Search
 
-This is the web site for http://www.vkpropertsearch.com
+This is the web site for http://www.vkpropertysearch.com
