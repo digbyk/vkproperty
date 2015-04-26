@@ -1,2 +1,2 @@
 # Victoria Knight Property Search
-https://github.com/digbyk/vkproperty
+This is the web site for http://www.vkpropertysearch.com
