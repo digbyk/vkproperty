@@ -7,11 +7,13 @@ module.exports.getSchools = function (callback) {
 	var schools = [];
 	School.find({}, function (err, data) {
 		for (var i = 0; i < data.length; i++) {
-			console.log(data[i]._doc.EstablishmentName);
 			schools.push({
-				name: data[i]._doc.EstablishmentName,
-				lat: data[i]._doc.lat,
-				lng: data[i]._doc.lng
+				name: data[i]._doc.name,
+				telStd: data[i]._doc.telStd,
+				telNum: data[i]._doc.telNum,
+				website: data[i]._doc.website,
+				lat: data[i]._doc.loc.coordinates[1],
+				lng: data[i]._doc.loc.coordinates[0]
 			});
 		}
 		if (err) callback(err, null);
