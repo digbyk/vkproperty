@@ -1,5 +1,3 @@
-var apiKey = 'AIzaSyC9Z6Urz_4J-xsHuOlOSMQfCbt_18hOF9c'; // TODO put in ENV
-
 var School = require('../models/school.js');
 var _ = require('lodash');
 
