@@ -31,8 +31,8 @@ app.use(session({
 	saveUninitialized: false
 }));
 
-var routes = require('./routes')();
-app.use('/', routes);
+app.use('/', require('./routes')());
+app.use('/api', require('./routes/api')());
 
 var host = config.NODE_HOST || process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 var port = config.NODE_PORT || process.env.OPENSHIFT_NODEJS_PORT || 3000;

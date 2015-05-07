@@ -62,10 +62,5 @@ module.exports = function () {
 			});
 		})
 	});
-	router.get('/api/schools', function (req, res) {
-		schoolsService.getSchools(function (err, data) {
-			res.json(data);
-		})
-	});
 	return router;
 };

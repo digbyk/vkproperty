@@ -4,6 +4,7 @@ function initialize() {
 			lat: 51.540115,
 			lng: -0.9042651
 		},
+		mapTypeId: google.maps.MapTypeId.TERRAIN,
 		zoom: 12
 	};
 	var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
@@ -15,7 +16,7 @@ function initialize() {
 			if (school.type === 'Other Independent School') {
 				icon = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png';
 			} else {
-				icon = 'http://maps.google.com/mapfiles/ms/icons/red-dot.png';
+				icon = 'http://maps.google.com/mapfiles/ms/icons/green-dot.png';
 			}
 			marker = new google.maps.Marker({
 				icon: icon,
