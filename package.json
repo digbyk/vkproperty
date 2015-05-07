@@ -47,6 +47,6 @@
 	"main": "app.js",
 	"scripts": {
 		"start": "nodemon -w **/*.js app.js",
-		"test": "mocha test"
+		"test": "mocha --timeout 4000 test"
 	}
 }
