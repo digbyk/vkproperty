@@ -1,8 +1,11 @@
 var expect = require('expect.js');
-require('../config/db.js');
+
 var schoolsService = require('../services/schools');
 
 describe('SchoolsService', function () {
+	before(function () {
+		require('../config/db.js');
+	});
 	describe('#getSchools()', function () {
 		it('should return a list of schools', function (done) {
 			schoolsService.getSchools(function (err, data) {

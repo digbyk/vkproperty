@@ -42,7 +42,6 @@
 		"mocha": "^2.2.4",
 		"nodemon": "*"
 	},
-	"bundleDependencies": [],
 	"private": true,
 	"main": "app.js",
 	"scripts": {
