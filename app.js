@@ -1,4 +1,10 @@
-var config = require('./config.js');
+var config;
+try {
+	config = require('./config.js');
+} catch (err) {
+	config = {};
+}
+
 var express = require('express');
 var app = express();
 var path = require('path');
