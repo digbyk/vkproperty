@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var sendgrid = require('sendgrid')(process.env.SENDGRID_USER, process.env.SENDGRID_PASSWORD);
 var schoolsService = require('../services/schools.js');
+var emailService = require('../services/mail.js');
 
 module.exports = function () {
 	router.use(function (req, res, next) {
@@ -26,13 +27,13 @@ module.exports = function () {
 		});
 	});
 	router.post('/contact', function (req, res) {
-		var email = new sendgrid.Email({
-			to: process.env.SENDGRID_TO,
-			from: req.body.email,
-			subject: 'New contact request from ' + req.body.name + (req.body.tel ? ' (' + req.body.tel + ')' : ''),
-			text: req.body.msg
-		});
-		sendgrid.send(email, function (err, json) {
+		var params = {
+			name: req.body.name,
+			email: req.body.email,
+			telephone: req.body.tel,
+			message: req.body.msg
+		};
+		emailService.sendContactMail(params, function (err, data) {
 			if (err) {
 				return console.error(err);
 			}
