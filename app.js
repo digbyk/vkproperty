@@ -1,10 +1,3 @@
-var config;
-try {
-	config = require('./config.js');
-} catch (err) {
-	config = {};
-}
-
 var express = require('express');
 var app = express();
 var path = require('path');
@@ -39,8 +32,8 @@ app.use(session({
 app.use('/', require('./routes')());
 app.use('/api', require('./routes/api')());
 
-var host = config.NODE_HOST || process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
-var port = config.NODE_PORT || process.env.OPENSHIFT_NODEJS_PORT || 3000;
+var host = process.env.NODE_HOST || process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+var port = process.env.NODE_PORT || process.env.OPENSHIFT_NODEJS_PORT || 3000;
 
 app.listen(port, host, function () {
 	console.log("Listening on " + host + ":" + port)
